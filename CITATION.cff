@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "Vehicle Insurance Production Grade MLOps Capstone"
+message: "If you use this project, please cite it as below."
+authors:
+  - family-names: Bhuyan
+    given-names: Rudra Prasad
+year: 2026
+url: https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/

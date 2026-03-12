@@ -37,3 +37,18 @@
   - First time 😆
   - Then go the website the check the data. 
   - Explore website
+  
+**Logging & Citation**
+  - Create an folder src/logger/__init__.py
+  - Then write the code for logging. 
+  - Helps in Debugging.
+  - Citation used for credit. [GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
+  - I learn during research paper reading time. 
+  - So I think to implement on my work.
+  - **Practical Tips**
+    1. Always log pipeline start/end
+    2. Log data shapes
+    3. Log model metrics
+    4. Always log exceptions
+    5. Use rotating logs
+  - Use this `uv pip install -e .`. 

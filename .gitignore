@@ -2,6 +2,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/data,git,python,visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=data,git,python,visualstudio
 
+*.pkl
+
 ### Data ###
 *.csv
 *.dat
