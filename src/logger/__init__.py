@@ -1,3 +1,20 @@
+"""
+Logger Configuration Module
+
+This module configures the application logging system using Loguru. 
+It ensures consistent logging across the project by centralizing 
+rotation, retention, and formatting logic.
+
+Features:
+    - Colored console logging (debugging).
+    - Rotating file logs (production persistence).
+    - Automatic log retention management.
+
+Dependencies:
+    - loguru: https://github.com/Delgan/loguru
+    - from_root: To resolve absolute paths from the project base.
+"""
+
 import os
 from loguru import logger
 from from_root import from_root

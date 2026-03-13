@@ -59,3 +59,10 @@
   - That simple added.
   - At the end using the trackback standard python library we trackback to exact line where the error occurs.
   - In the test folder test_exception.py we test how it works.
+
+**Constants**
+  - Define all the variables and directory name at one place
+  - Easy to find and centralized place.
+
+**MongoDB Connection**
+  - Write the code for connecting the data with the database.
