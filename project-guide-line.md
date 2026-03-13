@@ -52,3 +52,10 @@
     4. Always log exceptions
     5. Use rotating logs
   - Use this `uv pip install -e .`. 
+  
+**Exception**
+  - Used this to detect the error.
+  - First think simple then what we need during debugging time.
+  - That simple added.
+  - At the end using the trackback standard python library we trackback to exact line where the error occurs.
+  - In the test folder test_exception.py we test how it works.
