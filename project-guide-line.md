@@ -66,3 +66,7 @@
 
 **MongoDB Connection**
   - Write the code for connecting the data with the database.
+
+**Config (mongodb to df)**
+  - This time we create a script for 
+  - Fetch data from MongoDB and create pandas DF
