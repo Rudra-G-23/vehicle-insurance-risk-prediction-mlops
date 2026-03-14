@@ -47,7 +47,7 @@ class DataIngestionConfig:
     # Base directory for data ingestion artifacts
     data_ingestion_dir: str = os.path.join(
         training_pipeline_config.artifact_dir,
-        constants.DATA_INGESTION_INGESTED_DIR
+        constants.DATA_INGESTION_BASE_DIR_NAME
     )
 
     # Feature store dataset path
@@ -60,12 +60,14 @@ class DataIngestionConfig:
     # Training dataset path
     training_file_path: str = os.path.join(
         data_ingestion_dir,
+        constants.DATA_INGESTION_INGESTED_DIR,
         constants.TRAIN_FILE_NAME
     )
 
     # Testing dataset path
     testing_file_path: str = os.path.join(
         data_ingestion_dir,
+        constants.DATA_INGESTION_INGESTED_DIR,
         constants.TEST_FILE_NAME
     )
 

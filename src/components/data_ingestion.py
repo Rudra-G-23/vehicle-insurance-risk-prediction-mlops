@@ -84,8 +84,8 @@ class DataIngestion:
             logger.info("Performed train test split on the dataset.")
             
             data_ingestion_artifact = self.data_ingestion_artifact = DataIngestionArtifact(
-                train_file_path=self.training_file_path,
-                test_file_path=self.testing_file_path
+                train_file_path=self.data_ingestion_config.training_file_path,
+                test_file_path=self.data_ingestion_config.testing_file_path
             )
             
             
@@ -94,4 +94,4 @@ class DataIngestion:
             return data_ingestion_artifact
             
         except Exception as e:
-            raise Exception(e, sys)
+            raise Exception(e) from e
