@@ -70,3 +70,22 @@
 **Config (mongodb to df)**
   - This time we create a script for 
   - Fetch data from MongoDB and create pandas DF
+
+**Data Integration**
+- Constant
+  - Added in __init__.py 
+- Config entity
+  - Where file need to store 
+  - Mention on this file
+- Artifact entity
+  - During process time 
+  - What it produce 
+- Components
+  - `components/data_ingestion.py`
+  - The code what you written on the `data_access/proj1_data.py`
+  - all the function call on this data ingestion py script
+- Pipeline
+  - This data ingestion py file added in 
+  - Pipeline .py script
+- app . py / demo .py
+  - Run in demo and test
