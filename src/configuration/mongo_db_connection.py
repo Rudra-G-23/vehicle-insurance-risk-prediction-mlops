@@ -82,4 +82,4 @@ class MongoDBClient:
         
         except Exception as e:
             # Wrap original exception inside custom exception
-            raise MyException(e, sys)
+            raise MyException(e) from e

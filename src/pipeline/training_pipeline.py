@@ -29,11 +29,11 @@ class TrainingPipeline:
             return data_ingestion_artifact
         
         except Exception as e:
-            raise MyException(e, sys)
+            raise MyException(e) from e
 
     def run_pipeline(self) -> None:
         try:
             data_ingestion_artifact = self.start_data_ingestion()
         
         except Exception as e:
-            raise MyException(e, sys)
+            raise MyException(e) from e

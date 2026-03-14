@@ -39,7 +39,7 @@ class Proj1Data:
             logger.info("MongoDB client initialized successfully. ")
         
         except Exception as e:
-            raise MyException(e, sys)
+            raise MyException(e) from e
 
     def export_collection_as_dataframe(
         self,
@@ -87,4 +87,4 @@ class Proj1Data:
             return df
         
         except Exception as e:
-            raise MyException (e, sys)
+            raise MyException(e) from e

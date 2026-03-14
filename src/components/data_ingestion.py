@@ -20,7 +20,7 @@ class DataIngestion:
         try:
             self.data_ingestion_config = data_ingestion_config
         except Exception as e:
-            raise MyException(e, sys)
+            raise MyException(e) from e
     
     def export_data_into_feature_store(self) -> pd.DataFrame:
         
@@ -42,7 +42,7 @@ class DataIngestion:
             return df
 
         except Exception as e:
-            raise MyException(e, sys)
+            raise MyException(e) from e
         
     def split_data_as_train_test(self, df: pd.DataFrame) -> None:
         
@@ -71,7 +71,7 @@ class DataIngestion:
             logger.info("Exported train and test dataset.")
             
         except Exception as e:
-            raise MyException(e, sys)
+            raise MyException(e) from e
         
         
     def initiate_data_ingestion(self) -> DataIngestionArtifact:
