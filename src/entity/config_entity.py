@@ -2,8 +2,6 @@ import os
 from datetime import datetime
 from dataclasses import dataclass
 
-from src.constants import *
-
 from src.constants import (
     PIPELINE_NAME, ARTIFACT_DIR,
     DATA_INGESTION_INGESTED_DIR, DATA_INGESTION_FEATURE_STORE_DIR, DATA_FILE_NAME,

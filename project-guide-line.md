@@ -89,3 +89,11 @@
   - Pipeline .py script
 - app . py / demo .py
   - Run in demo and test
+
+
+Pipeline
+  - Training pipeline
+  - star_data_ingestion function 
+  - at the end run the all pipeline
+  - Create a script on test folder 
+  - And test it.
