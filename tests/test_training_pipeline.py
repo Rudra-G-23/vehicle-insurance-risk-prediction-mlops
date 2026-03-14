@@ -1,8 +1,8 @@
-from src.pipeline.training_pipeline import TrainPipeline
+from src.pipeline.training_pipeline import TrainingPipeline
 
-def test_training_pipeline():
-    pipeline = TrainPipeline()
-    return pipeline
+print("Starting training pipeline...")
 
-if __name__ == "__main__":
-    test_training_pipeline()
+pipeline = TrainingPipeline()
+pipeline.run_pipeline()
+
+print("Pipeline finished.")

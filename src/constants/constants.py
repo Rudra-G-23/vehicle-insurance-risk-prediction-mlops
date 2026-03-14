@@ -18,10 +18,10 @@ MONGODB_URL_KEY: str = (
     f"mongodb+srv://{MONGO_USERNAME}:{MONGO_PASSWORD}@{MONGO_CLUSTER}/"
 )
 
-PIPELINE_NAME: str = ""
+PIPELINE_NAME: str = "vehicle_insurance_pipeline"
 ARTIFACT_DIR: str = "artifact"
 
-MODEL_FILE_NAME = "model.pkl"
+MODEL_FILE_NAME: str = "model.pkl"
 
 TARGET_COLUMN: str = "Response"
 CURRENT_YEAR = date.today().year
