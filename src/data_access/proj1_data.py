@@ -65,19 +65,19 @@ class Proj1Data:
             - Replaces string value `na` with numpy NaN.
         """
         try:
-            logger.info(f"Fetching data from collection: {collection_name}")
-            
+            # Access specified collection from the default or specified database
             if database_name is None:
-                df = self.mongo_client.database
+                collection = self.mongo_client.database[collection_name]
             else:
-                db = self.mongo_client.client[database_name]
-            
-            collection = db[collection_name]
+                collection = self.mongo_client[database_name][collection_name]
+
+            # Convert collection data to DataFrame and preprocess
+            print("Fetching data from mongoDB")
             df = pd.DataFrame(list(collection.find()))
             
             logger.info(f"Data fetched successfully. Number of records: {len(df)}")
             
-           # Delete the `_id` colums
+           # Delete the `_id` column
             if "_id" in df.columns:
                 df.drop(columns=['_id'], inplace=True)
             
