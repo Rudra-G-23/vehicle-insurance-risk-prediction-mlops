@@ -91,9 +91,23 @@
   - Run in demo and test
 
 
-Pipeline
+**Pipeline**
   - Training pipeline
   - star_data_ingestion function 
   - at the end run the all pipeline
   - Create a script on test folder 
   - And test it.
+
+**Error - 1 [Data Ingestion Pipeline]**
+  - During fetching data from the MongoDB
+  - We suffer from error so we created a bugfix/branch 
+    - Issues
+      - Constants naming issues
+      - File miss match
+      - DB to connection 
+      - DB load error
+      - Timeout Error
+      - Exception Module Error
+      - And What not 🫨
+  - Fix all issues and now all done.
+  - Merge this branch with the main branch.
