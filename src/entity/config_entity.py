@@ -7,8 +7,6 @@ import src.constants.constants as constants
 
 # Generate timestamp for each pipeline run
 TIMESTAMP: str = datetime.now().strftime("%m_%d_%Y_%H_%M_%S")
-
-
 @dataclass
 class TrainingPipelineConfig:
     """
@@ -30,10 +28,8 @@ class TrainingPipelineConfig:
     artifact_dir: str = os.path.join(constants.ARTIFACT_DIR, TIMESTAMP)
     timestamp: str = TIMESTAMP
 
-
 # Create pipeline config object
 training_pipeline_config: TrainingPipelineConfig = TrainingPipelineConfig()
-
 
 @dataclass
 class DataIngestionConfig:
@@ -76,3 +72,14 @@ class DataIngestionConfig:
 
     # MongoDB collection name
     collection_name: str = constants.DATA_INGESTION_COLLECTION_NAME
+
+@dataclass
+class DataValidationConfig:
+    data_validation_dir: str = os.path.join(
+        training_pipeline_config.artifact_dir,
+        constants.DATA_VALIDATION_BASE_DIR_NAME
+    )
+    data_validation_report_file_path = os.path.join(
+        data_validation_dir,
+        constants.DATA_VALIDATION_REPORT_FILE_NAME
+    )
