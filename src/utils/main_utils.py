@@ -11,8 +11,8 @@ from src.logger import logger
 
 def read_yaml_file(file_path: str) -> dict:
     try:
-        with open(file_path, 'rb') as yaml_file:
-            return yaml_file
+        with open(file_path, 'r') as yaml_file:
+            return yaml.safe_load(yaml_file)
         
     except Exception as e:
         raise MyException(e) from e
@@ -50,7 +50,7 @@ def save_object(file_path: str, obj: object) -> None:
     except Exception as e:
         raise MyException(e) from e
 
-def load_object(file_path: str) -> None:
+def load_object(file_path: str) -> object:
     try:
         with open(file_path, 'rb') as file_obj:
             return dill.load(file_obj)

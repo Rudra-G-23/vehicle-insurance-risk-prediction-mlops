@@ -7,8 +7,10 @@ from pandas import DataFrame
 
 from src.exception import MyException
 from src.logger import logger
-from src.entity import DataValidationArtifact
-from src.entity import DataValidationConfig
+
+from src.entity.artifact_entity import DataValidationArtifact, DataIngestionArtifact
+from src.entity.config_entity import DataValidationConfig
+
 from src.constants.constants import SCHEMA_FILE_PATH
 from src.utils.main_utils import read_yaml_file
 
@@ -16,7 +18,7 @@ class DataValidation:
     
     def __init__(
         self,
-        data_ingestion_artifact: DataValidationArtifact,
+        data_ingestion_artifact: DataIngestionArtifact,
         data_validation_config: DataValidationConfig
         ):
         try:

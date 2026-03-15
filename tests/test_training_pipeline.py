@@ -1,5 +1,3 @@
-import sys
-sys.tracebacklimit = 1
 from src.pipeline.training_pipeline import TrainingPipeline
 
 print("Starting training pipeline...")
