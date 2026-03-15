@@ -9,7 +9,7 @@ from pandas import DataFrame
 from src.exception import MyException
 from src.logger import logger
 
-def read_yaml(file_path: str) -> dict:
+def read_yaml_file(file_path: str) -> dict:
     try:
         with open(file_path, 'rb') as yaml_file:
             return yaml_file

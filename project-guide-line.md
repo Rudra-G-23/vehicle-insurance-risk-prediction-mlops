@@ -111,3 +111,18 @@
       - And What not 🫨
   - Fix all issues and now all done.
   - Merge this branch with the main branch.
+
+**Utils**
+  - This script we wrote read and write the `yaml` and `array`
+  - We created the utility function for all the application.
+
+**Data Validation**
+  - Constants
+  - Config Entity
+  - Config Artifact
+  - Utils 
+  - Add all of this to validate the data
+  - We write everything in `components/data_validation.py`
+  - Add the config/schema.yaml so we can validate
+  - Used that in pipeline 
+  - Then test all of this.
