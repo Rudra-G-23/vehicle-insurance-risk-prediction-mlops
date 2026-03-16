@@ -145,3 +145,25 @@
     - Numerical / Categorical groups
     - Missing value threshold
     - Data Drift
+
+
+**Data Transformation**
+  - After validate our data we need to
+  - Transform our data so our model can train.
+  - First constants
+  - Then entity both artifact and config
+  - Then added a `components/data_transformation.py`
+
+```yaml
+Data Ingestion
+      ↓
+Data Validation
+      ↓
+Data Transformation  ← this code
+      ↓
+Model Trainer
+      ↓
+Model Evaluation
+      ↓
+Model Pusher
+```
