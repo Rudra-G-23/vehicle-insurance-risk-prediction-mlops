@@ -63,7 +63,7 @@ class DataTransformation:
             
             # Load Schema config
             num_features = self._schema_config["num_features"]
-            mm_cols = self._schema_config["num_features"]
+            mm_cols = self._schema_config["mm_columns"]
             logger.info("Columns loaded from schema.")
             
             # Creating preprocessor pipeline
