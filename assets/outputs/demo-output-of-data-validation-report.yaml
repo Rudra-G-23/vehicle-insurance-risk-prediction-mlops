@@ -1,0 +1,30 @@
+{
+ "validation_status": false,
+
+ "train_dataset": {
+   "missing_columns": ["age"],
+   "extra_columns": ["index"],
+   "column_order_correct": false,
+   "dtype_mismatch": {
+       "salary": {
+          "expected": "float64",
+          "found": "object"
+       }
+   },
+   "missing_numerical_columns": [],
+   "missing_categorical_columns": [],
+   "high_missing_values": {
+       "income": 0.42
+   }
+ },
+
+ "test_dataset": {},
+
+ "data_drift": {
+    "age": {
+        "train_mean": 32.5,
+        "test_mean": 40.1,
+        "drift": 7.6
+    }
+ }
+}

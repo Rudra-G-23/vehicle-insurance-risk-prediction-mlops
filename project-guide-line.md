@@ -126,3 +126,22 @@
   - Add the config/schema.yaml so we can validate
   - Used that in pipeline 
   - Then test all of this.
+
+**Improvement of Data Validation Pipeline**
+  - We know that we not prefer to used the f-string in production application/
+  - From now we used like this
+  ```py
+  # Simple
+  logger.info(f"Schema Loaded: {self._schema_config}")
+
+  # Industry
+  logger.info("Schema Loaded: %s", self._schema_config)
+  ```
+
+  - What we added in our code
+    - Column existence
+    - Column order
+    - Data Type
+    - Numerical / Categorical groups
+    - Missing value threshold
+    - Data Drift

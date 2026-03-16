@@ -23,12 +23,19 @@ numerical_columns:
   - Vintage
   - Response
 
+
 categorical_columns:
   - Gender
   - Vehicle_Age
   - Vehicle_Damage
 
+
 drop_columns: _id
+
+
+# Missing value tolerance (30%)
+missing_threshold: 0.3
+
 
 # for data transformation
 num_features:
