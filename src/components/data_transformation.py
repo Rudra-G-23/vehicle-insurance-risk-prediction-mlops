@@ -160,19 +160,16 @@ class DataTransformation:
         """
         
         try:
-            logger.info("Data Transformation started.")
-            if not self.data_validation_artifact.validation_status:
-                raise Exception(self.data_validation_artifact.message)
-            
+          
             # Load data
             train_df = self.read_data(self.data_ingestion_artifact.train_file_path)
             test_df = self.read_data(self.data_ingestion_artifact.test_file_path)
             logger.info("Train Test data loaded")
             
             # Features selection
-            input_feature_train_df = train_df.drop(columns=[TARGET_COLUMN], axis=1)
-            target_feature_train_df = test_df[TARGET_COLUMN]
-            input_feature_test_df = test_df.drop(columns=[TARGET_COLUMN], axis=1)
+            input_feature_train_df = train_df.drop(columns=[TARGET_COLUMN])
+            target_feature_train_df = train_df[TARGET_COLUMN]
+            input_feature_test_df = test_df.drop(columns=[TARGET_COLUMN])
             target_feature_test_df = test_df[TARGET_COLUMN]
             logger.info(f"Input & Target column{TARGET_COLUMN} defined for the both train and test datasets. ")
             

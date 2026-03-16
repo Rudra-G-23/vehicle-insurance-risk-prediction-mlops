@@ -167,3 +167,5 @@ Model Evaluation
       ↓
 Model Pusher
 ```
+- Add in the training pipeline
+- Fix the error and more error 
