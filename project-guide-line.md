@@ -169,3 +169,8 @@ Model Pusher
 ```
 - Add in the training pipeline
 - Fix the error and more error 
+
+**Model Trainer**
+  - This time we update all const, artifact and config
+  - For Model Trainer: `components/model_trainer.py`
+  - Added `src\entity\estimator.py` for the model trainer
