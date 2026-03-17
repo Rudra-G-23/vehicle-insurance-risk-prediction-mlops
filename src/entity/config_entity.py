@@ -105,3 +105,25 @@ class DataTransformationConfig:
         constants.DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
         constants.PREPROCESSING_OBJECT_FILE_NAME
     )
+
+@dataclass
+class ModelTrainerConfig:
+    model_trainer_dir: str = os.path.join(
+        training_pipeline_config.artifact_dir,
+        constants.MODEL_TRAINER_BASE_DIR_NAME
+    )
+    trained_model_file_path: str = os.path.join(
+        model_trainer_dir,
+        constants.MODEL_TRAINER_TRAINED_MODEL_DIR,
+        constants.MODEL_FILE_NAME
+    )
+    expected_accuracy: float = constants.MODEL_TRAINER_EXPECTED_SCORE
+    model_config_file_path: str = constants.MODEL_TRAINER_MODEL_CONFIG_FILE_PATH
+    
+    # Model Para
+    _n_estimators: int = constants.MODEL_TRAINER_N_ESTIMATORS
+    _min_samples_split: int = constants.MODEL_TRAINER_MIN_SAMPLES_SPLIT
+    _min_samples_leaf: int = constants.MODEL_TRAINER_MIN_SAMPLES_LEAF
+    _max_depth: int = constants.MODEL_TRAINER_MIN_SAMPLES_SPLIT_MAX_DEPTH
+    _criterion: str = constants.MODEL_TRAINER_MIN_SAMPLES_SPLIT_CRITERION
+    _radom_state: int = constants.MODEL_TRAINER_MIN_SAMPLES_SPLIT_RANDOM_STATE
