@@ -289,6 +289,13 @@ transformed_test.npy
 preprocessor.pkl
 ```
 
+```
+Data Ingestion  →  Data Validation  →  Data Transformation  →  Model Trainer
+     ↓                    ↓                    ↓                    ↓
+ raw data          clean data         numpy arrays         model.pkl
+                                    (preprocessor.pkl)
+ ```
+
 ---
 
 ## 6️. Model Training
@@ -302,6 +309,14 @@ Artifacts generated:
 ```
 model.pkl
 training_metrics.json
+```
+
+```
+ config/model.yaml   →   read params
+                         ↓
+                  train model
+                         ↓
+artifact/model.pkl  →   save trained model
 ```
 
 ---

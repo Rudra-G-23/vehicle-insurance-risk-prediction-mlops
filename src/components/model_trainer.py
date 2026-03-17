@@ -117,7 +117,8 @@ class ModelTrainer:
             
             logger.info("Saving new model as performance is better then previous one.")
             my_model = MyModel(preprocessing_obj, train_model)
-            save_object(self.model_trainer_config.model_config_file_path, my_model)
+            save_object(self.model_trainer_config.trained_model_file_path, my_model)
+            logger.info(f"Saving model at: {self.model_trainer_config.trained_model_file_path}")
             logger.info("Save final model object that includes both preprocessing and the trained model.")
             
             model_trainer_artifact =  ModelTrainerArtifact(

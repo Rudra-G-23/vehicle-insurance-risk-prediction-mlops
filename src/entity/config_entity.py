@@ -117,8 +117,13 @@ class ModelTrainerConfig:
         constants.MODEL_TRAINER_TRAINED_MODEL_DIR,
         constants.MODEL_FILE_NAME
     )
+    
+    model_config_file_path: str = os.path.join(
+        model_trainer_dir,
+        constants.MODEL_FILE_NAME
+    )
+    
     expected_accuracy: float = constants.MODEL_TRAINER_EXPECTED_SCORE
-    model_config_file_path: str = constants.MODEL_TRAINER_MODEL_CONFIG_FILE_PATH
     
     # Model Para
     _n_estimators: int = constants.MODEL_TRAINER_N_ESTIMATORS
