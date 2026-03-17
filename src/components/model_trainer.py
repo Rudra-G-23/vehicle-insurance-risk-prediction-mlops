@@ -45,9 +45,10 @@ class ModelTrainer:
             logger.info("Training RadomForestClassifier with specified parameters")
             
             # splitting the train & test data into features and target variables
-            X_train, y_train, X_test, y_test = train[:, :-1], train[: -1], test[:, :-1], test[:, -1]
+            X_train, y_train = train[:, :-1], train[:, -1]
+            X_test, y_test = test[:, :-1], test[:, -1]
             logger.info("Train-test split done.")
-            
+                        
             # Parameters
             model = RandomForestClassifier(
                 n_estimators= self.model_trainer_config._n_estimators,
@@ -99,7 +100,7 @@ class ModelTrainer:
             logger.info("Train-Test data loaded inside model for training")
             
             train_model, metric_artifact = self.get_model_object_and_report(
-                train= test_arr, test= test_arr
+                train= train_arr, test= test_arr
             )
             logger.info("Model object & artifact loaded.")
             
@@ -109,7 +110,8 @@ class ModelTrainer:
             logger.info("Preprocessing object loaded.")
 
             # Check it model accuracy meet the expected threshold
-            if accuracy_score(train_arr[: -1], train_model.predict(train_arr[:, :-1])) < self.model_trainer_config.expected_accuracy:
+            threshold = accuracy_score(train_arr[:, -1], train_model.predict(train_arr[:, :-1]))
+            if threshold < self.model_trainer_config.expected_accuracy:
                 logger.info("No model found with score above the base score.")
                 raise Exception("No model found with score above the base score.")
             

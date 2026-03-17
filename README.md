@@ -18,7 +18,7 @@ Accurate risk prediction helps companies:
 This project builds a **complete ML pipeline** that automates this prediction process.
 
 
-![pipeline](/assets/pipeline-architecture-1.png)
+![Pipeline Architecture Diagram](./assets/helper/pipeline-architecture-1.png)
 
 ---
 
@@ -109,35 +109,35 @@ uv sync
 
 # ⚙️ Tech Stack
 
-### Programming
+**Programming**
 
 * Python
 
-### Machine Learning
+**Machine Learning**
 
 * Scikit-learn
 * Pandas
 * NumPy
 * Polars
 
-### Database
+**Database**
 
 * MongoDB Atlas
 
-### Cloud Services
+**Cloud Services**
 
 * AWS S3 (Model Registry)
 * AWS EC2 (Deployment)
 * AWS ECR (Docker Image Storage)
 
-### DevOps & MLOps
+**DevOps & MLOps**
 
 * Docker
 * GitHub Actions
 * CI/CD Pipeline
 * Self Hosted Runner
 
-### Web Framework
+**Web Framework**
 
 * Flask
 
@@ -424,7 +424,7 @@ http://<EC2_PUBLIC_IP>:5080/training
 
 Give the repository a **star ⭐** and feel free to contribute.
 
-# Citation
+# ⭐ Citation
 ```bibtex
 @misc{bhuyan2026vehicle_mlops,
   author = {Bhuyan, Rudra Prasad},

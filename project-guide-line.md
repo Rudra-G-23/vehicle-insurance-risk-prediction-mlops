@@ -174,3 +174,6 @@ Model Pusher
   - This time we update all const, artifact and config
   - For Model Trainer: `components/model_trainer.py`
   - Added `src\entity\estimator.py` for the model trainer
+  - After used create estimator + model trainer script 
+  - We all added into pipeline by creating start model trainer 
+  - Then call inside the run pipeline and then test the file.
