@@ -8,7 +8,7 @@ from src.logger import logger
 
 class TargetValueMapping:
     def __init__(self):
-        self.yest: int = 0
+        self.yes: int = 0
         self.no: int = 1
         
     def _asdict(self):

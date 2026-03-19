@@ -1,4 +1,4 @@
-# 🚗 Vehicle Insurance Risk Prediction – End-to-End MLOps Pipeline
+# 🚗 Vehicle Insurance Risk Prediction – End-to-End MLOps Project
 
 An **industry-style Machine Learning Operations (MLOps) project** that predicts vehicle insurance risk using an automated ML pipeline.
 
